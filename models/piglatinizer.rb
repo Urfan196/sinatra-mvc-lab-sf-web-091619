@@ -13,7 +13,7 @@ attr_accessor :text
         final_result.join(' ')
       end
 
-      def pig(word)
+      def piglatinize(word)
         first_letter = word[0].downcase
               if ["a", "e", "i", "o", "u"].include?(first_letter)
                 "#{word}way"
