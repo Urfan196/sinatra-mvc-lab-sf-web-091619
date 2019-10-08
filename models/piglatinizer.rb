@@ -14,13 +14,13 @@ attr_accessor :text
       end
 
       def pig(word)
-        first_letter = word[0].downcase
+        first_letter = word[0]
               if ["a", "e", "i", "o", "u"].include?(first_letter)
                 "#{word}way"
               else
-                consonant_of_word = word.downcase.gsub(/[aeiou]/, ' ') .split(" ")
+                consonant_of_word = word.gsub(/[aeiou]/, ' ') .split(" ")
                 removed_consonant_legth = consonant_of_word.shift.length
-                splited_word = word.downcase.split('')
+                splited_word = word.split('')
                 removed_word = splited_word.shift(removed_consonant_legth)
                 splited_word.join('') + removed_word.join('') + "ay"
               end
