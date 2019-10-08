@@ -8,7 +8,7 @@ attr_accessor :text
       def each_word(word)
         splited_word = word.split(' ')
         final_result = splited_word.map do |word|
-          pig(word)
+          piglatinize(word)
         end
         final_result.join(' ')
       end
