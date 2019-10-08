@@ -5,15 +5,15 @@ attr_accessor :text
       @text = text
       end
 
-      def each_word(word)
+      def piglatinize(word)
         splited_word = word.split(' ')
         final_result = splited_word.map do |word|
-          piglatinize(word)
+          pig(word)
         end
         final_result.join(' ')
       end
 
-      def piglatinize(word)
+      def pig(word)
         first_letter = word[0].downcase
               if ["a", "e", "i", "o", "u"].include?(first_letter)
                 "#{word}way"
