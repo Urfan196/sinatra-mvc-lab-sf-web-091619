@@ -12,7 +12,7 @@ attr_accessor :text
               else
                 consonant_of_word = word.downcase.gsub(/[aeiou]/, ' ') .split(" ")
                 removed_consonant_legth = consonant_of_word.shift.length
-                splited_word = word.split('')
+                splited_word = word.downcase.split('')
                 removed_word = splited_word.shift(removed_consonant_legth)
                 splited_word.join('') + removed_word.join('') + "ay"
               end
